@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Editable Text</title>
+  <style>
+  .container {
+    width: 100%;
+  }
+  .select {
+    display: inline-block;
+    box-sizing: border-box;
+    align-items: center;
+    margin: 0 auto;
+  }
+  #resultTextArea{
+    margin: 0 auto;
+    width: 100%;
+    height: 11.8rem;
+    font-size: 6rem;
+    border: none;
+    background-color: transparent;
+    resize: none;
+    outline: none;
+    white-space: normal;
+    text-align: justify;
+    text-align-last:center;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    margin-top: 2.9rem;
+
+  }
+  .EntText{
+    margin: 0 auto;
+    font-size: 1.2rem;
+    margin-top: 4%;
+  }
+  button{
+    background-color: white;
+    border-color: black;
+    transition: 0.35s;
+    height: 2.4rem;
+    width: 7rem;
+  }
+  button:hover{
+    background-color: violet;
+    border-color: white;
+    transition: 0.35s;
+  }  
+</style>
+</head>
+<body>
+  <br><hr><center>
+<p class="EntText">ENTER TEXT TO PREVIEW YOUR VINYL LETTERING</p>
+</center><center><textarea id="resultTextArea" onclick="javascript:eraseText();">Your Message</textarea></center>
+<div class="container">
+<div class="select">Select Font Style:<br><select id="selectElement" onchange="SetFont()">
+<option>Choose a Font</option>
+<option value="Amaze">Amaze</option>
+<option value="Airlangga Personal Use Only">Airlangga</option>
+<option value="AngryBirds">AngryBirds</option>
+<option value="Bakery">Bakery</option>
+<option value="Bukhari Script">Bukhari Script</option>
+<option value="Autumn in November">Autumn in November</option>
+<option value="Back to Black Demo">Back to Black Demo</option>
+<option value="Ballpark">Ballpark Weiner</option>
+<option value="Baron Neue">Baron Neue</option>
+<option value="Becker">Becker</option>
+<option value="Beckett-Kanzlei">Beckett Kanzlei</option>
+<option value="Belshaw">Belshaw</option>
+<option value="Black">Black Leb</option>
+<option value="BitingMyNailsW90-Regular">Biting My Nails Regular</option>
+<option value="Better Caramel">Better Caramel</option>
+<option value="Blackletter">Blackletter</option>
+<option value="Blazed">Blazed</option>
+<option value="Bloodlust">Bloodlust</option>
+<option value="Bondie">Bondie</option>
+<option value="Bonita">Bonita</option>
+<option value="BrushScript">BrushScript</option>
+<option value="Bring tha noize">Bring tha noize</option>
+<option value="BravAda Arma">BravAda Arma</option>
+<option value="BubbleGum">BubbleGum</option>
+<option value="Calebasse (Unregistered)">Calebasse (Unregistered)</option>
+<option value="Calvin and Hobbes">Calvin and Hobbes</option>
+<option value="Cartoon Marker">Cartoon Marker</option>
+<option value="Cake n Truffles">Cake n Truffles</option>
+<option value="Celestina script">Celestina</option>
+<option value="CAC Champagne">Champagne</option>
+<option value="Cheetah Kick - Personal Use">Cheetah Kick</option>
+<option value="Code Bold">Code Bold</option>
+<option value="Code Light">Code Light</option>
+<option value="Comic Kings">Comic Kings</option>
+<option value="Coolvetica">Coolvetica</option>
+<option value="Coolvetica Ink">Coolvetica RG</option>
+<option value="Dollie Script Personal Use">Dollie Sript</option>
+<option value="Cooper Black">Cooper Black</option>
+<option value="Dylan Comic">Dylan Comic</option>
+<option value="decalled script">Decalled script</option>
+<option value="Faradisa Script">Faradisa Script</option>
+<option value="Flashit">Flashit</option>
+<option value="Fontdinerdotcom">Fontdinerdotcom</option>
+<option value="funky-mother-demo-regular">Funky Mother Demo</option>
+<option value="Gabelisa">Gabelisa</option>
+<option value="Gigi">Gigi</option>
+<option value="Forte MT">Forte MT</option>
+<option value="Gothics">Gothics</option>
+<option value="Eng Gothic">Gothics Bold</option>
+<option value="NewsGothic Italic">Gothics Italic</option>
+<option value="Grinched">Grinched</option>
+<option value="Granotta">Granotta</option>
+<option value="Harlow">Harlow</option>
+<option value="Home">Home</option>
+<option value="Harlow Solid">Harlow Solid</option>
+<option value="Harry P">Harry P</option>
+<option value="Homoarakhn">Homoarakhn</option>
+<option value="Honey Script">Honey Script</option>
+<option value="honey">Honey Bold</option>
+<option value="Hughs">Hughs</option>
+<option value="Jade Monkey">Jade</option>
+<option value="Jestho Fisher - Personal Use">Jestho Fisher</option>
+<option value="Infinite Stroke">Infinite Stroke</option>
+<option value="Kaela">Kaela</option>
+<option value="Lobster 1.4">Lobster 1.4</option>
+<option value="Lovely Melody">Lovely Melody</option>
+<option value="KG Crossing A Line">KG Crossing A Line</option>
+<option value="LoveLetters">LoveLetters</option>
+<option value="MTF 100">MTF 100</option>
+<option value="Magic Sound">Magic Sound</option>
+<option value="Magnolia Sky">Magnolia Sky</option>
+<option value="Manda Script">Manda Script</option>
+<option value="Mellanie">Mellanie</option>
+<option value="Mishaland">Mishaland</option>
+<option value="Maria">Maria</option>
+<option value="MissSmartyPants">MissSmartyPants</option>
+<option value="Misses">Misses</option>
+<option value="Modena">Modena</option>
+<option value="Mermaid">Mermaid</option>
+<option value="Multicolore">Multicolore</option>
+<option value="Musicals">Musicals</option>
+<option value="TimesModernEF">ModernEF</option>
+<option value="New Athletic M54">New Athletic M54</option>
+<option value="Nickainley">Nickainley</option>
+<option value="Pacifico">Pacifico</option>
+<option value="Pristina">Pristina</option>
+<option value="Polo">Polo Seb</option>
+<option value="Pink Blue">Pink Blue</option>
+<option value="Quiet Meows">Quiet Meows</option>
+<option value="Rakoon Personal Use">Rakoon</option>
+<option value="raustila">raustila</option>
+<option value="roastink demo">roastink</option>
+<option value="Richela Kids">Richela Kids</option>
+<option value="Royal Acid">Royal Acid</option>
+<option value="Script">Script</option>
+<option value="Starfish">Starfish</option>
+<option value="Sophistica 1">Sophistica</option>
+<option value="Stella Wilson">Stella Wilson</option>
+<option value="Stencil">Stencil</option>
+<option value="Stencil D">Stencil D</option>
+<option value="Sweet Hipster">Sweet Hipster</option>
+<option value="STYLEWARS 2011">STYLEWARS 2011</option>
+<option value="StencilD">StencilD</option>
+<option value="Sweet Pea">Sweet Pea</option>
+<option value="Telegrafico">Telegrafico</option>
+<option value="Typo College Demo">Typo College Demo</option>
+<option value="Tyler">Tyler</option>
+<option value="Anja Eliane accent">Anja Eliane accent</option>
+<option value="Waltograph">Waltograph</option>
+<option value="Varsity">Varsity</option>
+<option value="Washington Text">Washington Text</option>
+<option value="Watermelon Script Demo">Watermelon Script</option>
+<option value="XerkerFW">XerkerFW</option>
+<option value="RemachineScriptW01-Regular">RemachineScript</option>
+</select>
+</div>
+<div class="select">Select Color:<br><select id="selectElement1" onchange="SetColor()">
+<option value="black">Choose a Font</option>
+<option value="#ffb6c1">Soft Pink</option>
+<option value="#85C1E9">Ice Blue</option>
+<option value="#FFFF00">Yellow</option>
+<option value="#808080">Gray</option>
+<option value="#3EB489">Mint</option>
+<option value="#E6E6FA">Lavender</option>
+<option value="#FFFFFF">Matte White</option>
+<option value="#000000">Matte Black</option>
+<option value="#A5A5A8">Matte Silver</option>
+<option value="#D2BF37">Matte Gold</option>
+<option value="#FF0000">Red</option>
+<option value="#FFA500">Orange</option>
+<option value="#FF69B4">Bright Pink</option>
+<option value="#8a2be2">Purple</option>
+<option value="#9acd32">Yellow Green</option>
+<option value="#228B22">Green</option>
+<option value="#30D5C8">Turquoise</option>
+<option value="#48b4e0">Sky Blue</option>
+<option value="#0000FF">Brilliant Blue</option>
+<option value="#00008B">Dark Blue</option>
+</select>
+</div>
+</div>
+<br><br><br><br> 
+
+</body>
+</html>
+
+<script>
+  function SetFont()
+  {
+    var value = document.getElementById("selectElement").value;
+    var textareaElement = document.getElementById("resultTextArea");  
+    textareaElement.style.fontFamily = value;  
+  }
+  function SetColor(){
+    var value = document.getElementById("selectElement1").value;
+    var textareaElement = document.getElementById("resultTextArea");
+    textareaElement.style.color = value;  
+  }
+  function eraseText() {
+     document.getElementById("resultTextArea").value = "";
+}
+  </script>
